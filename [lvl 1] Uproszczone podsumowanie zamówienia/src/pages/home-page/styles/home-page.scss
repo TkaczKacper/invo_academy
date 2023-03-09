@@ -4,6 +4,7 @@
    background-color: var(--color-background);
    position: absolute;
    width: 100%;
+   height: 100%;
 }
 .order-summary-container {
    display: flex;
@@ -33,6 +34,10 @@
       color: var(--color-white);
       background-color: var(--color-primary);
    }
+   & &__button:hover {
+      background-color: var(--color-hover);
+      cursor: pointer;
+   }
    & &__cancel {
       color: var(--color-title);
       margin: 20px auto;
@@ -41,6 +46,21 @@
       line-height: 160%;
       font-weight: bold;
       letter-spacing: -0.01em;
+   }
+   & &__cancel:hover {
+      font-size: 18px;
+   }
+   @media (min-width: 1024px) {
+      max-width: 500px;
+      height: 700px;
+
+      & &__photo {
+         background-size: cover;
+         height: 232px;
+      }
+      &__cancel {
+         font-size: 16px;
+      }
    }
 }
 .order-summary-details {
@@ -61,6 +81,18 @@
       letter-spacing: -0.01em;
       font-weight: medium;
       font-size: 14px;
+   }
+   @media (min-width: 1024px) {
+      height: 235px;
+
+      & &__header {
+         font-size: 32px;
+         line-height: 32px;
+      }
+      & &__description {
+         font-size: 16px;
+         line-height: 16px;
+      }
    }
 }
 .order-summary-details-plan {
@@ -85,6 +117,19 @@
       letter-spacing: -0.01em;
       color: var(--color-primary);
    }
+   & &__change:hover {
+      font-size: 18px;
+      color: var(--color-hover);
+   }
+   @media (min-width: 1024px) {
+      height: 83px;
+      & &__change {
+         font-size: 16px;
+      }
+      & &__icon {
+         margin: auto 25px;
+      }
+   }
 }
 .order-summary-details-plan-info {
    display: flex;
@@ -92,6 +137,7 @@
    width: 50%;
    gap: 2px;
    align-items: start;
+   justify-content: center;
    border-left: 1px solid var(--color-stroke);
    margin: auto 0;
    padding-left: 20px;
@@ -109,5 +155,16 @@
       font-weight: medium;
       letter-spacing: -0.01em;
       color: var(--color-body);
+   }
+   @media (min-width: 1024px) {
+      height: 49px;
+      & &__header {
+         font-size: 18px;
+         line-height: 18px;
+      }
+      & &__description {
+         font-size: 14px;
+         line-height: 14px;
+      }
    }
 }
