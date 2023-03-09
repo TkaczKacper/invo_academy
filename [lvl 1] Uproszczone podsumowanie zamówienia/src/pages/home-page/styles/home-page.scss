@@ -48,7 +48,7 @@
       letter-spacing: -0.01em;
    }
    & &__cancel:hover {
-      font-size: 18px;
+      font-size: 16px;
    }
    @media (min-width: 1024px) {
       max-width: 500px;
@@ -60,6 +60,9 @@
       }
       &__cancel {
          font-size: 16px;
+      }
+      & &__cancel:hover {
+         font-size: 18px;
       }
    }
 }
@@ -166,5 +169,40 @@
          font-size: 14px;
          line-height: 14px;
       }
+   }
+}
+
+//loading animation
+.order-summary-container {
+   & &__payment-processing {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      height: 56px;
+      border: 0;
+      margin: 0 auto;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 160%;
+   }
+   & &__payment-processing div {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--color-title);
+      animation: left-right 1s infinite;
+   }
+}
+@keyframes left-right {
+   0% {
+      transform: translate(-60px, 0);
+   }
+   50% {
+      transform: translate(60px, 0);
+   }
+   100% {
+      transform: translate(-60px, 0);
    }
 }
