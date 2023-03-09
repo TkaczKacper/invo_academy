@@ -8,19 +8,27 @@
   <title>INVO Academy JS Starter with Vite</title>
 </head>
 
-<!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
-
 <body>
   <div id="home-page">
-    <div>
-      <img src="/public/images/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-      <h1>INVO Academy JS Starter with Vite</h1>
-      <p>
-        See the README.md for more information on how to start your challenge.
-      </p>
-      <div class="card">
-        <button id="counter" type="button"></button>
+    <div class="order-summary-container">
+      <div class="order-summary-container__photo"></div>
+      <div class="order-summary-details">
+        <div class="order-summary-details__text-container">
+          <h1 class="order-summary-details__header">Order Summary</h1>
+          <p class="order-summary-details__description">You're close! Confirm your purchase and complete your order in
+            the next step</p>
+        </div>
+        <div class="order-summary-details-plan">
+          <div class="order-summary-details-plan__icon"></div>
+          <div class="order-summary-details-plan-info">
+            <h2 class="order-summary-details-plan-info__header">Annual Plan</h2>
+            <p class="order-summary-details-plan-info__description">$58.99 / year</p>
+          </div>
+          <a class="order-summary-details-plan__change" href="#">Change</a>
+        </div>
       </div>
+      <button class="order-summary-container__button">Proceed to Payment</button>
+      <a class="order-summary-container__cancel" href="#">Cancel Order</a>
     </div>
   </div>
 
